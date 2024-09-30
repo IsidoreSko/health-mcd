@@ -1,4 +1,4 @@
-// import Image from "next/image";
+"used client"
 
 export default function Home() {
   return <div>Helllllo !!!!!</div>;
