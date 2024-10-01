@@ -1,17 +1,18 @@
-// Import the functions you need from the SDKs you need
-import { initializeApp } from "firebase/app";
-// TODO: Add SDKs for Firebase products that you want to use
-// https://firebase.google.com/docs/web/setup#available-libraries
+/* global process */
 
-// Your web app's Firebase configuration
+import { initializeApp } from "firebase/app";
+import { getFirestore } from "firebase/firestore";
+import { getStorage } from "firebase/storage";
+
 const firebaseConfig = {
-  apiKey: process.env.NEXT_PUBLIC_API_KEY,
-  authDomain: "healthe-mcd.firebaseapp.com",
-  projectId: "healthe-mcd",
-  storageBucket: "healthe-mcd.appspot.com",
-  messagingSenderId: "172463346262",
-  appId: "1:172463346262:web:ab2fe74542c0f583e6a1f7",
+  apiKey: process.env.NEXT_PUBLIC_FIREBASE_API_KEY,
+  authDomain: "healthdonals.firebaseapp.com",
+  projectId: "healthdonals",
+  storageBucket: "healthdonals.appspot.com",
+  messagingSenderId: "765192112858",
+  appId: "1:765192112858:web:b10ce9a68c8636ac2bb3e3",
 };
 
-// Initialize Firebase
 export const app = initializeApp(firebaseConfig);
+export const db = getFirestore(app);
+export const storage = getStorage();
